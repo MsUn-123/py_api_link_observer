@@ -75,7 +75,9 @@ Every set period of time (you chose) bot will notify you about changes on follow
     - [ ] - Add headers column for requests parser.
 - [ ] - Make scraper async.
 
+
 - [ ] - Change variables in settings.py to upper-case. Because they are CONSTANTS.
 - [ ] - Rename period CONSTANT in settings.py.
+
 
 - [ ] - Learn git workflow.
