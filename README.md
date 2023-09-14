@@ -1,6 +1,6 @@
 # py_api_link_observer
 
-## About <a name = "about"></a>
+## About
 
 Python FastAPI app that stores links-xpath-stringValue entry in the SQLAlchemy database and checks periodically using Selenium if this value changes. Useful if you need to snipe something from online-shops or in case you dont trust auto-emailing systems.
 
@@ -8,7 +8,7 @@ This project is not very scalable (for now), so it's for personal use only.
 
 Python version used - 3.11.
 
-## Installing <a name = "getting_started"></a>
+## Installing
 
 ### Before everything else
 
@@ -49,7 +49,7 @@ uvicorn app.api:app --reload
 python3 telegram/bot.py
 ```
 
-## Usage <a name = "usage"></a>
+## Usage
 
 You can use api (and should) with Telegram bot.
 List of available commands:
@@ -63,7 +63,7 @@ List of available commands:
 
 Every set period of time (you chose) bot will notify you about changes on following websites (if any).
 
-## TO-DO <a name = "todo"></a>
+## TO-DO
 
 - [ ] - Add command to edit check period in the telegram bot.
 - [ ] - Make scraper headless.
