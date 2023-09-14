@@ -1,0 +1,10 @@
+#python things
+.venv/
+__pycache__/
+
+#database
+*.db
+
+#random files
+telegram/settings.py
+*.log
