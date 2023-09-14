@@ -1,11 +1,5 @@
 # py_api_link_observer
 
-## Table of Contents
-
-- [About](#about)
-- [Installing](#installing)
-- [Usage](#usage)
-
 ## About <a name = "about"></a>
 
 Python FastAPI app that stores links-xpath-stringValue entry in the SQLAlchemy database and checks periodically using Selenium if this value changes.
@@ -23,7 +17,7 @@ Install selenium. Guide to How-To: https://www.geeksforgeeks.org/how-to-install-
 ### Setting up environment
 
 ```
-git clone https://github.com/MsUn-123/py_api_link_observer > py_api_link_observer
+git clone https://github.com/MsUn-123/py_api_link_observer
 cd py_api_link_observer
 python -m venv <env_name>
 pip install requirements.txt
@@ -46,6 +40,7 @@ period = <Time in minutes after which the bot will start checking links from dat
 
 ```
 uvicorn app.api:app --reload
+# Database entries.db will be created on the first startup.
 ```
 
 2 - Telegram bot
@@ -60,14 +55,14 @@ You can use api (and should) with Telegram bot.
 List of available commands:
 
 ```
-/add - Add link to the database. Input: <link> <xpath> "<value>"
+/add - Add entry to the database. Input: <link> <xpath> "<value>"
 /check - Get value from webpage using xpath. Input: <link> <xpath>
-/list - List all links from database.
-/remove - Removes link from database. Input: <id>
+/list - List all entries from database.
+/remove - Removes entry from database. Input: <id>
 ```
 
 Every set period of time (you chose) bot will notify you about changes on following websites (if any).
 
-## TO-DO
+## TO-DO <a name = "todo"></a>
 
 Empty. For now!
