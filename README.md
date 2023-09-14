@@ -2,7 +2,7 @@
 
 ## About <a name = "about"></a>
 
-Python FastAPI app that stores links-xpath-stringValue entry in the SQLAlchemy database and checks periodically using Selenium if this value changes.
+Python FastAPI app that stores links-xpath-stringValue entry in the SQLAlchemy database and checks periodically using Selenium if this value changes. Useful if you need to snipe something from online-shops or in case you dont trust auto-emailing systems.
 
 This project is not very scalable (for now), so it's for personal use only.
 
@@ -55,14 +55,27 @@ You can use api (and should) with Telegram bot.
 List of available commands:
 
 ```
-/add - Add entry to the database. Input: <link> <xpath> "<value>"
-/check - Get value from webpage using xpath. Input: <link> <xpath>
+/add - Add entry to the database. Input: /add <link> <xpath>
+/check - Get value from webpage using xpath. Input: /check <link> <xpath>
 /list - List all entries from database.
-/remove - Removes entry from database. Input: <id>
+/remove - Removes entry from database. Input: /remove <id>
 ```
 
 Every set period of time (you chose) bot will notify you about changes on following websites (if any).
 
 ## TO-DO <a name = "todo"></a>
 
-Empty. For now!
+- [ ] - Add command to edit check period in the telegram bot.
+- [ ] - Make scraper headless.
+- [ ] - Short url in /list if url length > 40. Make it optional (/listfull?)
+- [ ] - Replace time.sleep in scraper to smthn else.
+- [ ] - Rework input validation.
+- [ ] - Add support for requests-lib scraper to reduce scrape time.
+    - [ ] - Add parser type to entity in DB.
+    - [ ] - Add headers column for requests parser.
+- [ ] - Make scraper async.
+
+- [ ] - Change variables in settings.py to upper-case. Because they are CONSTANTS.
+- [ ] - Rename period CONSTANT in settings.py.
+
+- [ ] - Learn git workflow.

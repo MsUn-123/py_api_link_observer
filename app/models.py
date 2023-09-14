@@ -12,4 +12,4 @@ class Entry(Base):
     xpath = Column(String)
     value = Column(String)
     # headers = Column(String) #unused
-    # parse_type = Column(Boolean) #will be 0 always
+    # parse_type = Column(Boolean) #unused

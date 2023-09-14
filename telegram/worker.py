@@ -19,7 +19,7 @@ class Scraper():
     def get_by_xpath(self, url, xpath, filter=False):
         try:
             self.driver.get(url)
-            time.sleep(3)
+            time.sleep(5)
             html = self.driver.page_source
             soup = bs(html, "lxml")
             dom = etree.HTML(str(soup))
@@ -37,6 +37,8 @@ class Scraper():
         self.driver.close()
         self.driver.quit()
 
+    def close(self):
+        self.driver.close()
 
 if __name__ == "__main__":
     pass

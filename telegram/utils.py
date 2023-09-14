@@ -1,7 +1,7 @@
 import shlex
 
 def validate_input_add(input):
-    if len(input) == 3: return True
+    if len(input) == 2: return True
     else: return False
 
 def validate_input_remove(input):
