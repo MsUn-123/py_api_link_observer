@@ -16,7 +16,8 @@ def add_entry(db: Session, entry: schemas.EntryCreate):
     try:
         db_entry = models.Entry(link=entry.link,
                             xpath=entry.xpath,
-                            value=entry.value)
+                            value=entry.value,
+                            alias=entry.alias)
         db.add(db_entry)
         db.commit()
         db.refresh(db_entry)

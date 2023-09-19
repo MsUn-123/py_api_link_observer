@@ -12,6 +12,8 @@ Python version used - 3.11.
 
 ### Before everything else
 
+Install Firefox.
+If you don't have telegram-bot account: https://t.me/botfather
 Install selenium. Guide to How-To: https://www.geeksforgeeks.org/how-to-install-selenium-in-python/
 
 ### Setting up environment
@@ -19,7 +21,8 @@ Install selenium. Guide to How-To: https://www.geeksforgeeks.org/how-to-install-
 ```
 git clone https://github.com/MsUn-123/py_api_link_observer
 cd py_api_link_observer
-python -m venv <env_name>
+python -m venv venv
+source venv/bin/activate #on lunix
 pip install requirements.txt
 ```
 
@@ -63,21 +66,22 @@ List of available commands:
 
 Every set period of time (you chose) bot will notify you about changes on following websites (if any).
 
-## TO-DO <a name = "todo"></a>
+## TO-DO
+
+###
 
 - [ ] - Add command to edit check period in the telegram bot.
-- [ ] - Make scraper headless.
-- [ ] - Short url in /list if url length > 40. Make it optional (/listfull?)
-- [ ] - Replace time.sleep in scraper to smthn else.
+- [x] - Make scraper headless.
+- [x] - Add aliases for links.
+- [x] - Use markdown to shorten URLs in /list command.
+- [ ] - Add entry datetime created field.
+- [ ] - Replace time.sleep in scraper.
+- [x] - Change variables in settings.py to upper-case. Because they are CONSTANTS.
+- [x] - Rename period CONSTANT in settings.py.
 - [ ] - Rework input validation.
+- [ ] - Add more ways to find data on webpage besides xpath.
+- [ ] - Add support for other browsers (Chrome, Opera, etc.)
 - [ ] - Add support for requests-lib scraper to reduce scrape time.
     - [ ] - Add parser type to entity in DB.
     - [ ] - Add headers column for requests parser.
-- [ ] - Make scraper async.
-
-
-- [ ] - Change variables in settings.py to upper-case. Because they are CONSTANTS.
-- [ ] - Rename period CONSTANT in settings.py.
-
-
-- [ ] - Learn git workflow.
+- [ ] - Make scraper+telegram-bot async.

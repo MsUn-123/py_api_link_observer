@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.remote.command import Command
+from selenium.webdriver.firefox.options import Options
 from bs4 import BeautifulSoup as bs
 from lxml import etree
 import time
@@ -7,14 +8,13 @@ import time
 
 class Scraper():
     def __init__(self):
-        # self.headers = {
-        #     "User-Agent": "Your user agent",
-        #     "Cookie": "Your cookies",
-        # }
+        # self.headers = None
+        self.options = Options()
+        self.options.add_argument("-headless")
         self.driver = None
 
     def start(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox(options=self.options)
 
     def get_by_xpath(self, url, xpath, filter=False):
         try:
@@ -28,10 +28,6 @@ class Scraper():
             return result
         except Exception as e:
             return f'Error: {e}'
-    
-    def format_result(self, input):
-        output = input.replace(' ','').replace('\n', '')
-        return output
 
     def quit(self):
         self.driver.close()
@@ -41,9 +37,4 @@ class Scraper():
         self.driver.close()
 
 if __name__ == "__main__":
-    pass
-    # worker = Scraper()
-    # worker.start()
-    # value = worker.get_by_xpath('https://en.wikipedia.org/wiki/Nike,_Inc.', '//*[@id="History"]')
-    # worker.quit()
-    # print(value)
+    ...

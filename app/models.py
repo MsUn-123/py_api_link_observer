@@ -11,5 +11,4 @@ class Entry(Base):
     link = Column(String)
     xpath = Column(String)
     value = Column(String)
-    # headers = Column(String) #unused
-    # parse_type = Column(Boolean) #unused
+    alias = Column(String)

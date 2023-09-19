@@ -8,3 +8,5 @@ __pycache__/
 #random files
 telegram/settings.py
 *.log
+selen_test/*
+TODO.md
